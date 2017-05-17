@@ -1,0 +1,68 @@
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="carViewModel"
+            type="com.example.serenitest.viewmodel.ItemCarViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/item_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_large"
+        android:onClick="@{carViewModel::onItemClick}"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_car"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@{carViewModel.imageRes}"
+            />
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_car"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_toEndOf="@+id/image_car"
+            android:text="@{carViewModel.carName}"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="mr gary allen"/>
+
+        <TextView
+            android:id="@+id/label_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/label_name"
+            android:layout_below="@+id/label_name"
+            android:text="@{carViewModel.brandName}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text="0729-256-147"/>
+
+        <TextView
+            android:id="@+id/label_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/label_phone"
+            android:layout_below="@+id/label_phone"
+            android:text="@{carViewModel.speedMax}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text="gary.allen@example.com"/>
+
+    </RelativeLayout>
+
+
+</layout>

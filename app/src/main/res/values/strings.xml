@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SerenityTest</string>
+    <string name="default_loading_car">Press to load cars!</string>
+    <string name="action_cars">Voitures</string>
+</resources>
